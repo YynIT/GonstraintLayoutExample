@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 <!--ConstraintLayout自身
-    android:layout_width="match_parent"属性的match_parent和wrap_content值的影响
+    android:layout_width="match_parent"属性的match_parent和wrap_content值的效果
 -->
     <ImageView
         android:id="@+id/img"
