@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <!--chain链的使用-->
+    <!--第1行 spread 0dp-->
+    <TextView
+        android:id="@+id/chain_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_11"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chain_11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_1"
+        app:layout_constraintRight_toLeftOf="@+id/chain_111"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chain_111"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--第2行 spread  wrap_content-->
+    <TextView
+        android:id="@+id/chain_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_22"
+        app:layout_constraintTop_toBottomOf="@+id/chain_1" />
+
+    <TextView
+        android:id="@+id/chain_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_2"
+        app:layout_constraintRight_toLeftOf="@+id/chain_222" />
+
+    <TextView
+        android:id="@+id/chain_222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_22"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--第3行 spread_inside 0dp-->
+    <TextView
+        android:id="@+id/chain_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_33"
+        app:layout_constraintTop_toBottomOf="@+id/chain_2" />
+
+    <TextView
+        android:id="@+id/chain_33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_3"
+        app:layout_constraintRight_toLeftOf="@+id/chain_333" />
+
+    <TextView
+        android:id="@+id/chain_333"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_33"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--第4行 spread_inside wrap_content-->
+    <TextView
+        android:id="@+id/chain_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_44"
+        app:layout_constraintTop_toBottomOf="@+id/chain_3" />
+
+    <TextView
+        android:id="@+id/chain_44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_4"
+        app:layout_constraintRight_toLeftOf="@+id/chain_444" />
+
+    <TextView
+        android:id="@+id/chain_444"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_44"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--第5行 packed 0dp -->
+    <TextView
+        android:id="@+id/chain_5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_55"
+        app:layout_constraintTop_toBottomOf="@+id/chain_4" />
+
+    <TextView
+        android:id="@+id/chain_55"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_5"
+        app:layout_constraintRight_toLeftOf="@+id/chain_555" />
+
+    <TextView
+        android:id="@+id/chain_555"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_55"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--第6行 packed wrap_content-->
+    <TextView
+        android:id="@+id/chain_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_66"
+        app:layout_constraintTop_toBottomOf="@+id/chain_5" />
+
+    <TextView
+        android:id="@+id/chain_66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_6"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_6"
+        app:layout_constraintRight_toLeftOf="@+id/chain_666" />
+
+    <TextView
+        android:id="@+id/chain_666"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_6"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_66"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--第7行 packed bias-->
+    <TextView
+        android:id="@+id/chain_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="A"
+        android:textColor="#000000"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/chain_77"
+        app:layout_constraintTop_toBottomOf="@+id/chain_6" />
+
+    <TextView
+        android:id="@+id/chain_77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ccaaff"
+        android:text="B"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_7"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_7"
+        app:layout_constraintRight_toLeftOf="@+id/chain_777" />
+
+    <TextView
+        android:id="@+id/chain_777"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="C"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chain_7"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toRightOf="@+id/chain_77"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

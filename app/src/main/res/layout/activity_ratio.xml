@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--按比例设置宽高(Ratio) layout_constraintDimensionRatio-->
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="姓名:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12345" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#aaccff"
+        android:text="123456"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintWidth_max="90dp"
+        app:layout_constraintWidth_min="5dp"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/ratio_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffeeaa"
+        android:text="ratio_1"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="5:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone" />
+
+    <Button
+        android:id="@+id/ratio_2"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#eeffaa"
+        android:text="ratio_2"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratio_1" />
+
+    <Button
+        android:id="@+id/ratio_3"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#eeaaff"
+        android:text="ratio_3"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="W,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratio_2" />
+
+    <Button
+        android:id="@+id/ratio_33"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#eaeaff"
+        android:text="ratio_3"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toRightOf="@id/ratio_3"
+        app:layout_constraintTop_toBottomOf="@id/ratio_2" />
+
+    <Button
+        android:id="@+id/ratio_4"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#aaeeff"
+        android:text="ratio_4"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="H,2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratio_3" />
+
+    <Button
+        android:id="@+id/ratio_44"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#aeaeff"
+        android:text="ratio_4"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="W,2:1"
+        app:layout_constraintLeft_toRightOf="@id/ratio_4"
+        app:layout_constraintTop_toBottomOf="@id/ratio_3" />
+
+    <Button
+        android:id="@+id/ratio_5"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#ffaaee"
+        android:text="ratio_5"
+        android:textColor="#000000"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratio_4" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:background="#aaccee"
+        android:text="ratio_6"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratio_5" />
+
+
+</android.support.constraint.ConstraintLayout>

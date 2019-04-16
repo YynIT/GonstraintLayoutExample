@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Barrier屏障使用-->
+    <TextView
+        android:id="@+id/id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/id_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:lines="1"
+        android:text="Hello World!"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@+id/id_barrier"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--app:layout_constraintLeft_toRightOf="@id/id_tv"-->
+
+    <TextView
+        android:id="@+id/id_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="性别："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv" />
+
+    <EditText
+        android:id="@+id/id_et1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:lines="1"
+        android:text="Hello"
+        android:textColor="#000000"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@+id/id_barrier"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/id_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="id_tv,id_tv1" />
+
+</android.support.constraint.ConstraintLayout>

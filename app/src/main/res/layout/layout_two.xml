@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--WRAP_CONTENT：强制约束（在1.1中添加）-->
+    <TextView
+        android:id="@+id/id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="姓名："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/id_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:lines="1"
+        android:text="HelloHelloHelloHelloHello"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@id/id_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/id_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="性别："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv" />
+
+    <EditText
+        android:id="@+id/id_et1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:lines="1"
+        android:text="Hello"
+        android:textColor="#000000"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@id/id_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv" />
+
+    <!--使用wrap_contetn和layout_constrainedWidth，id_et3在id_tv3右边，没有遮盖id_tv3-->
+    <TextView
+        android:id="@+id/id_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="民族："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv1" />
+
+    <EditText
+        android:id="@+id/id_et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:lines="1"
+        android:text="汉族汉族汉族汉族汉族汉族汉族汉族汉族汉族汉族汉族"
+        android:textColor="#000000"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@id/id_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv1" />
+
+    <!--只使用wrap_contetn，id_et3遮盖部分id_tv3-->
+    <TextView
+        android:id="@+id/id_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="民族："
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@id/id_et3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv2" />
+
+    <EditText
+        android:id="@+id/id_et3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:lines="1"
+        android:text="汉族汉族汉族汉族汉族汉族汉族汉族汉族汉族汉族"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/id_tv"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_tv2" />
+
+</android.support.constraint.ConstraintLayout>
